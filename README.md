@@ -24,3 +24,16 @@ It takes care of scaling and failover for your application, provides deployment 
 
 ## Use Proxmox Cloud-Init to Deploy Your VMs
 
+Cloud-Init is the de facto multi-distribution package that handles early initialization of a VM instance.  
+Using Cloud-Init, configuration of network devices and SSH keys on the hypervisor side is possible.  
+When the VM starts for the first time, the Cloud-Init software inside the VM will apply those settings.  
+
+Many Linux distributions provide ready-to-use Cloud-init images, mostly designed for **OpenStack**.  
+These images will also work with Proxmox VE.  
+While it may seem convenient to get such ready-to-use images, we usually recommend to prepare the images by yourself.  
+The advantage is that you'll know exactly what you've installed, and this helps you later to customize images for your needs.  
+
+## Ubuntu Cloud Images
+
+- Head over to https://cloud-images.ubuntu.com/
+- 
