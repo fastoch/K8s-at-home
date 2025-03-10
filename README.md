@@ -37,10 +37,14 @@ workload resource to scale back down.
 
 It's a Node which controls a set of worker nodes (workloads runtime) and resembles a cluster.  
 A Master Node has the following components to help manage worker nodes:
-- **Kube-APIServer**:
-- **Kube-Controller-Manager**:
-- **Etcd**:
-- **Kube Scheduler**:
+- **Kube-APIserver**: which acts as the frontend to the cluster. All external communication to the cluster is via the APIserver.
+- **Kube-Controller-Manager**: which runs a set of controllers for the running cluster. It implements governance across the cluster.  
+- **Etcd**: the cluster state database
+- **Kube Scheduler**: which schedules activities to the worker nodes based on events occurring on the etcd. It also holds the nodes resources plan
+  to determine the proper action for the triggered event. For ex, the scheduler would figure out which worker node will host a newly scheduled Pod.
+
+
+
 
 
 @10/20
