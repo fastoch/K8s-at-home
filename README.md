@@ -43,8 +43,28 @@ A Master Node has the following components to help manage worker nodes:
 - **Kube Scheduler**: which schedules activities to the worker nodes based on events occurring on the etcd. It also holds the nodes resources plan
   to determine the proper action for the triggered event. For ex, the scheduler would figure out which worker node will host a newly scheduled Pod.
 
+In order to have high availability (HA), replication failover, etc., we need to have these Master Nodes.  
+The Master Nodes sit within our K8s cluster, and their role is to manage the whole container orchestration deployments.  
+
+The Master nodes should always be available and we should have more than one for failover.  
+
+## Labels & Selectors
+
+Labels are key/value pairs that are attached to objects such as Pods.  
+Labels are intended to be used to specify identifying attributes of objects that are meaningful and relevant to users, but do not directly 
+imply semantics to the core system.  
+
+Labels can be used to organize and to select subsets of objects.  
+They can be attached to objects at creation time, or subsequently added and modified at any time.  
+
+Each object can have a set of key/value labels defined. Each key must be unique for a given object.  
+Labels allow for efficient queries and watches, and are ideal for use in UIs and CLIs. 
+
+Non-identifying information should be recorded using **annotations**.  
+
+You can assign labels to different nodes within your cluster that basically instruct K8s what you want them to be used for.  
 
 
 
 
-@10/20
+@13/20
