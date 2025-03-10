@@ -1,6 +1,6 @@
 # Resources 
 
-- https://www.youtube.com/watch?v=dQMWTULEbS0
+- https://www.youtube.com/watch?v=dQMWTULEbS0&list=PLXHMZDvOn5sVXjb88kYXSI7UMx4rhQwOj
 - 
 
 # What is K8s?
